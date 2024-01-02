@@ -53,36 +53,45 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:praveenkumar R 
+RegisterNumber:212223050037  
 */
-
-
-
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
+UP COUNTER:
+module now(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up <=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
+DOWN COUNTER:
+module dc(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_down <=4'd0;
+else
+counter_down<=counter_down+4'd1;
+end
+assign counter=counter_down;
+endmodule
+OUTPUT:
+### RTL LOGIC UP COUNTER AND DOWN COUNTER
+![169768632-71a6d2bd-960b-499f-be47-786c3e2485a1](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/ffa051d2-4466-4692-bd98-ddca9ba1e84e)
+![169768640-f52e9138-811c-41cb-87eb-4ef82dba554f](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/d09baed4-ce7a-44fb-bdfc-ad592af60b1b)
 ### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
+![169768915-394aa9b4-25dd-4e46-b4a2-977fbe090c88](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/3a198486-d52d-4aec-8bcf-e053a46e8148)
+![169768928-b1b707b1-b30d-460c-85b6-2a251b6970bf](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/2101442e-6145-40d2-a052-db040ff3c215)
 ### TRUTH TABLE 
+![198869113-7671b9ff-4763-4bec-9850-b1df2cae1476](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/ba25b0a1-fb36-4219-99ac-1414eb820657)
+![198869122-14a2576c-7030-4c30-82b3-3857ef4330c3](https://github.com/yogeshwaran72/Exp-7-Synchornous-counters-/assets/153492924/96293923-2c52-4a93-b6a6-dfc6a4e5a8ae)
+### RESULTS
+Thus 4 bit up and down counters is implemented and its functionality is validated.
 
 
 
-
-
-
-### RESULTS 
